@@ -4,16 +4,16 @@
  * Tasks:
  *
  * gulp prod
- *   Generates the library in production mode
+ *   Generates the library in production mode.
  *
  * gulp dev
- *   Generates the library in development mode
+ *   Generates the library in development mode.
  *
  * gulp live
- *   Generates the library in development mode and watches for changes
+ *   Generates the library in development mode and watches for changes.
  *
  * gulp
- *   Alias for `gulp prod`
+ *   Alias for `gulp prod`.
  */
 
 const fs = require('fs');
@@ -42,7 +42,7 @@ const BANNER_OPTIONS =
 };
 const BUILD_DIR = './dist';
 
-// Default environment
+// Default environment.
 process.env.NODE_ENV = 'development';
 
 function logError(error)
@@ -59,13 +59,13 @@ function bundle(options)
 		{
 			entries      : path.join(__dirname, PKG.main),
 			extensions   : [ '.js' ],
-			// required for sourcemaps (must be false otherwise)
+			// required for sourcemaps (must be false otherwise).
 			debug        : process.env.NODE_ENV === 'development',
-			// required for watchify
+			// required for watchify.
 			cache        : {},
-			// required for watchify
+			// required for watchify.
 			packageCache : {},
-			// required to be true only for watchify
+			// required to be true only for watchify.
 			fullPaths    : watch
 		})
 		.transform('babelify',
@@ -188,7 +188,7 @@ gulp.task('bundle:watch', () =>
 
 gulp.task('watch', (done) =>
 {
-	// Watch changes in JS files
+	// Watch changes in JS files.
 	gulp.watch([ 'gulpfile.js', 'lib/**/*.js' ], gulp.series(
 		'lint'
 	));

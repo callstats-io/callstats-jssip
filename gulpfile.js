@@ -4,10 +4,10 @@
  * Tasks:
  *
  * gulp prod
- *   Generates the library in production mode.
+ *   Generates the library in production mode (minified).
  *
  * gulp dev
- *   Generates the library in development mode.
+ *   Generates the library in development mode (sourcemaps enabled).
  *
  * gulp live
  *   Generates the library in development mode and watches for changes.

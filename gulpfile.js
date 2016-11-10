@@ -28,7 +28,6 @@ const header = require('gulp-header');
 const uglify = require('gulp-uglify');
 const browserify = require('browserify');
 const watchify = require('watchify');
-const del = require('del');
 const envify = require('envify/custom');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
@@ -72,7 +71,7 @@ function bundle(options)
 		.transform('babelify',
 			{
 				presets : [ 'es2015' ],
-				plugins : [ 'transform-runtime', 'transform-object-assign' ]
+				plugins : [ 'transform-runtime' ]
 			})
 		.transform(envify(
 			{
@@ -100,9 +99,14 @@ function bundle(options)
 			.on('error', logError)
 			.pipe(source(`${PKG.name}.js`))
 			.pipe(buffer())
-			.pipe(rename(`${PKG.name}.js`))
 			.pipe(gulpif(process.env.NODE_ENV === 'production',
 				uglify()
+			))
+			.pipe(gulpif(process.env.NODE_ENV === 'production',
+				rename(`${PKG.name}.min.js`)
+			))
+			.pipe(gulpif(process.env.NODE_ENV === 'development',
+				rename(`${PKG.name}.js`)
 			))
 			.pipe(header(BANNER, BANNER_OPTIONS))
 			.pipe(gulp.dest(BUILD_DIR));
@@ -110,8 +114,6 @@ function bundle(options)
 
 	return rebundle();
 }
-
-gulp.task('clean', () => del(BUILD_DIR, { force: true }));
 
 gulp.task('env:dev', (done) =>
 {
@@ -199,21 +201,18 @@ gulp.task('watch', (done) =>
 
 gulp.task('prod', gulp.series(
 	'env:prod',
-	'clean',
 	'lint',
 	'bundle'
 ));
 
 gulp.task('dev', gulp.series(
 	'env:dev',
-	'clean',
 	'lint',
 	'bundle'
 ));
 
 gulp.task('live', gulp.series(
 	'env:dev',
-	'clean',
 	'lint',
 	'bundle:watch',
 	'watch'

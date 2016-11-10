@@ -66,7 +66,8 @@ function bundle(options)
 			// required for watchify.
 			packageCache : {},
 			// required to be true only for watchify.
-			fullPaths    : watch
+			fullPaths    : watch,
+			standalone   : 'jssipCallstats'
 		})
 		.transform('babelify',
 			{

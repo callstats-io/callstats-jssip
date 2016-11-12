@@ -1,9 +1,7 @@
 # TODO
 
-* Re-think the return value of `jssipCallstats()` since the app cannot call `sendUserFeedback()` on it without knowing the internally chosen `conferenceID`. In fact, `jssipCallstats()` must return another kind of object that exposes a `sendUserFeedback()` wrapper that does not require `conferenceID`.
+* Document API and building steps.
 
-* Handle hold, unhold, muted, etc.
+* In order to be a Bower package, the future owner of this library (callstats.io) must publish it to the Bower registry. Same for NPM.
 
-* Implement `associateMstWithUserID`.
-
-* In order to be a Bower package, the future owner of this library (callstats.io) must publish it to the Bower registry.
+* Document that `conferenceID` matches the SIP `Call-ID` header value. This may not be desirable if a B2BUA changes such a value. In that case, the app must set `session.data.conferenceID` within the `newRTCSession` event.

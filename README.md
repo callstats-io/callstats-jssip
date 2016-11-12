@@ -14,22 +14,9 @@ When using Bower or a `<script>` tag, the provided library is built with [browse
 **NOTE:** This library does not include the **callstats.io** library (it must be added separetely).
 
 
-## API
+## Documentation
 
-#### `jssipCallstats(ua, callstatsModule, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
-
-| Params             | Argument  | Type        | Description               |
-|--------------------|-----------|-------------|---------------------------|
-| `ua`               | Required  | `JsSIP.UA`  | JsSIP `UA` instance       |
-| `callstatsModule`  | Optional  | `function`  | The `callstats.io` module |
-
-If `callstatsModule` parameter is `null`, the library will attempt to use `window.callstats` (assuming that **callstats.io** library was already loaded).
-
-The rest of parameters match those in [callstats.initialize()](http://www.callstats.io/api/#callstats-initialize-with-app-secret), with a small difference:
-
-* `localUserID` is not required. If not set (or `null`), the library fills it with an object containing the SIP URI and display name of the given `JsSIP.UA` instance.
-
-The function returnsan already initialized `callstats` object.
+* Read the full [documentation](docs/index.md) in the docs folder.
 
 
 ## Usage example
@@ -67,7 +54,7 @@ ua.start();
 
 // Provide the jssip-callstats library with the UA, the callstats.io module
 // and required parameters
-jssipCallstats(ua, callstats, AppID, AppSecret);
+jssipCallstats(ua, AppID, AppSecret);
 ```
 
 

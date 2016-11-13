@@ -52,8 +52,7 @@ var ua = new JsSIP.UA(config);
 // Run it
 ua.start();
 
-// Provide the jssip-callstats library with the UA, the callstats.io module
-// and required parameters
+// Run the jssip-callstats library for this UA
 jssipCallstats(ua, AppID, AppSecret);
 ```
 

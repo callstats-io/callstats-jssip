@@ -1,13 +1,13 @@
 {
   "name": "jssip-callstats",
-  "version": "1.0.0-pre2",
+  "version": "1.0.0-rc1",
   "description": "jssip interface to callstats.io",
   "author": "Iñaki Baz Castillo <inaki@nimblea.pe> at Nimble Ape LTD (https://nimblea.pe)",
   "license": "UNLICENSED",
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
-    "debug": "^2.3.0"
+    "debug": "2.3.0"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.15.0",
@@ -15,7 +15,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "envify": "^3.4.1",
-    "eslint": "^3.9.1",
+    "eslint": "^3.10.0",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-eslint": "^3.0.1",

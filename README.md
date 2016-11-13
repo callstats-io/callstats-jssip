@@ -5,13 +5,15 @@
 
 ## Install
 
+_TODO:_ NPM/Bower libraries must be published to the NPM/Bower registries by callstats.io once they own this project.
+
 * Using NPM: `$ npm install jssip-callstats`
 * Using Bower: `$ bower install jssip-callstats`
 * Adding a `<script>` tag in the HTML.
 
 When using Bower or a `<script>` tag, the provided library is built with [browserify](http://browserify.org), which means that it can be used with any kind of JavaScript module loader system (AMD, CommonJS, etc) or, in case no module loaded is used, a global `window.jssipCallstats` is exposed.
 
-**NOTE:** This library does not include the **callstats.io** library (it must be added separetely).
+_NOTE:_ This library does not include the **callstats.io** library (it must be added separetely).
 
 
 ## Documentation

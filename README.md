@@ -67,10 +67,10 @@ Install NPM development dependencies:
 $ npm install
 ```
 
-Install `gulp-cli` 4.0 globally (which provides the `gulp` command):
+Install `gulp-cli` globally (which provides the `gulp` command):
 
 ```bash
-$ npm install -g gulpjs/gulp-cli#4.0
+$ npm install -g gulpjs
 ```
 
 * `gulp prod` generates a production/minified `dist/jssip-callstats.min.js` bundle.

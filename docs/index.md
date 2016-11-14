@@ -3,12 +3,12 @@
 
 ## API
 
-The main module `jssipCallstats` is a function that receives a `JsSIP.UA` instance and parameters for `callstats.initialize()`.
+The main module `callstatsjssip` is a function that receives a `JsSIP.UA` instance and parameters for `callstats.initialize()`.
 
 The main module also exports a `setCallstatsModule()` function.
 
 
-#### `jssipCallstats(ua, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
+#### `callstatsjssip(ua, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
 
 | Params  | Argument  | Type        | Description               |
 |---------|-----------|-------------|---------------------------|
@@ -19,7 +19,7 @@ The rest of parameters match those in [callstats.initialize()](http://www.callst
 * `localUserID` is not required. If `null`, the library fills it with an object containing the SIP URI and display name of the given `JsSIP.UA` instance.
 
 
-#### `jssipCallstats.setCallstatsModule(module)`
+#### `callstatsjssip.setCallstatsModule(module)`
 
 | Params   | Argument  | Type        | Description                  |
 |----------|-----------|-------------|------------------------------|
@@ -27,12 +27,12 @@ The rest of parameters match those in [callstats.initialize()](http://www.callst
 
 By default this library uses `window.callstats` (assuming that the **callstats.io** library has been previously loaded via a `<script>` tag.
 
-However, the **callstats.io** library can also be loaded using loaders such as [require.js](http://www.requirejs.org/) meaning that it may be not exposed as a global `window.callstats`. In that case, `jssipCallstats.setCallstatsModule()` can be used to provide the **jssip-callstats** library with the **callstats.io** main module.
+However, the **callstats.io** library can also be loaded using loaders such as [require.js](http://www.requirejs.org/) meaning that it may be not exposed as a global `window.callstats`. In that case, `callstatsjssip.setCallstatsModule()` can be used to provide the **callstats-jssip** library with the **callstats.io** main module.
 
 
 ### `SessionHandler` class
 
-When a JsSIP `RTCSession` is created, the **jssip-callstats** library creates an instance of `SessionHandler` and stores it into `session.data.callstatsSessionHandler` to make it available to the application.
+When a JsSIP `RTCSession` is created, the **callstats-jssip** library creates an instance of `SessionHandler` and stores it into `session.data.callstatsSessionHandler` to make it available to the application.
 
 The `SessionHandler` class provides a wrapper over the API exposed by the `callstats` object, making it simpler by not requiring some parameters such as the `pcObject` or `conferenceID`.
 
@@ -79,8 +79,8 @@ ua.on('newRTCSession', function(data) {
   session.data.conferenceID = session.getHeader('X-Conference-ID');
 });
 
-// Run the jssip-callstats library for this UA
-jssipCallstats(ua, AppID, AppSecret);
+// Run the callstats-jssip library for this UA
+callstatsjssip(ua, AppID, AppSecret);
 ```
 
 

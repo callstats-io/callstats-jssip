@@ -1,7 +1,7 @@
 {
-  "name": "jssip-callstats",
+  "name": "callstats-jssip",
   "version": "1.0.0-rc1",
-  "description": "jssip interface to callstats.io",
+  "description": "JsSIP interface to callstats.io",
   "author": "Iñaki Baz Castillo <inaki@nimblea.pe> at Nimble Ape LTD (https://nimblea.pe)",
   "license": "UNLICENSED",
   "main": "lib/index.js",

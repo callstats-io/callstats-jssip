@@ -5,13 +5,9 @@
 
 ## Install
 
-_TODO:_ NPM/Bower libraries must be published to the NPM/Bower registries by callstats.io once they own this project.
-
-* Using NPM: `$ npm install callstats-jssip`
-* Using Bower: `$ bower install callstats-jssip`
 * Adding a `<script>` tag in the HTML.
 
-When using Bower or a `<script>` tag, the provided library is built with [browserify](http://browserify.org), which means that it can be used with any kind of JavaScript module loader system (AMD, CommonJS, etc) or, in case no module loaded is used, a global `window.callstatsjssip` is exposed.
+In case no module loaded is used, a global `window.callstatsjssip` is exposed.
 
 _NOTE:_ This library does not include the **callstats.io** library (it must be added separetely).
 
@@ -59,7 +55,15 @@ callstatsjssip(ua, AppID, AppSecret);
 ```
 
 
-## Development
+## Development (TODO)
+
+When using Bower or a `<script>` tag, the provided library is built with [browserify](http://browserify.org), which means that it can be used with any kind of JavaScript module loader system (AMD, CommonJS, etc) or,
+
+_TODO:_ NPM/Bower libraries need be published to the NPM/Bower registries.
+
+* Using NPM: `$ npm install callstats-jssip`
+* Using Bower: `$ bower install callstats-jssip`
+
 
 Install NPM development dependencies:
 
@@ -77,6 +81,7 @@ $ npm install -g gulpjs
 * `gulp dev` generates a development non-minified and sourcemaps enabled `dist/callstats-jssip.js` bundle.
 
 
-## Author
+## Authors
 
 Iñaki Baz Castillo at Nimble Ape LTD (https://nimblea.pe).
+Karthik BR (https://callstats.io)

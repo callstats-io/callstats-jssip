@@ -2,7 +2,10 @@
   "name": "callstats-jssip",
   "version": "1.0.0",
   "description": "JsSIP interface for callstats.io",
-  "author": "Karthik BR <karthik@callstats.io>, Iñaki Baz Castillo <inaki@nimblea.pe>",
+  "authors": [
+    "Karthik BR <karthik@callstats.io>",
+    "Iñaki Baz Castillo <inaki@nimblea.pe>"
+  ],
   "license": "UNLICENSED",
   "main": "lib/index.js",
   "dependencies": {
@@ -15,7 +18,8 @@
   },
   "keywords": [
     "csio",
-    "common"
+    "callstats-io",
+    "JsSIP"
   ],
   "bugs": {
     "url": "https://github.com/callstats-io/callstats-jssip/issues"

@@ -55,11 +55,11 @@ callstatsjssip(ua, AppID, AppSecret);
 ```
 
 
-## Development (TODO)
+## Development
 
 When using Bower or a `<script>` tag, the provided library is built with [browserify](http://browserify.org), which means that it can be used with any kind of JavaScript module loader system (AMD, CommonJS, etc) or,
 
-_TODO:_ NPM/Bower libraries need be published to the NPM/Bower registries.
+NPM/Bower libraries have been published to the NPM/Bower registries.
 
 * Using NPM: `$ npm install callstats-jssip`
 * Using Bower: `$ bower install callstats-jssip`
@@ -83,5 +83,5 @@ $ npm install -g gulpjs
 
 ## Authors
 
-Iñaki Baz Castillo at Nimble Ape LTD (https://nimblea.pe).
-Karthik BR (https://callstats.io)
+Karthik BR (https://callstats.io), Iñaki Baz Castillo at Nimble Ape LTD (https://nimblea.pe).
+

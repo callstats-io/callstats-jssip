@@ -1,6 +1,6 @@
 {
   "name": "callstats-jssip",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JsSIP interface for callstats.io",
   "authors": [
     "Karthik BR <karthik@callstats.io>",
